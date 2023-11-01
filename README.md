@@ -33,6 +33,10 @@ In this mode we just disabled the pool for online servers on System 1.
 
 ###### Mode 2 - Server will will local time and also sync time with online servers.
 In this mode we just enabled the pool for online servers on System 1.
+> After seting up server and client configuration file make sure to restart chrony service, use below command:
+```sh
+sudo service chrony restart
+```
 
 ## Method 2: One-Time Synchronization
 Client request for time synchronization using command line.
@@ -40,6 +44,10 @@ Client request for time synchronization using command line.
 #### Server Configuration (System 1):
 ```sh
 cmdallow 192.168.1.3
+```
+> After seting up server configuration file make sure to restart chrony service, use below command:
+```sh
+sudo service chrony restart
 ```
 #### Client Configuration (System 2):
 - Client does not require to change configuration, it uses default configuration.
